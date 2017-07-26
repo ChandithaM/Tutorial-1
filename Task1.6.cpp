@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <time.h>
 
 using namespace std;
 
@@ -8,15 +9,13 @@ int main() {
 
     char run;
     int randN;
-    int randS;
     int guessN;
     cout << "Welcome to Guess the Number!!!\n";
 
 
     do{
-        cout << "Enter random number to start game: ";
-        cin >> randS;
-        srand(randS);
+
+        srand(time(NULL));
         randN = (rand()%15) +1;
 
         for (int i = 0; i < 3; ++i) {
